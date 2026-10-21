@@ -1,0 +1,4 @@
+From python:3.14
+WORKDIR /app
+COPY . .
+CMD ["python", "app.py"]
