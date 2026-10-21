@@ -1,0 +1,7 @@
+FROM python:3.14 AS builder
+WORKDIR /build 
+RUN echo "Building the application..."
+FROM python:3.14-slim AS final
+WORKDIR /app
+COPY app.py .
+CMD ["python", "app.py"]
